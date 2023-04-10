@@ -1,25 +1,14 @@
 import os
-
-import requests
-from flask import Flask
-from tchan import ChannelScraper
-
-
-TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
-TELEGRAM_ADMIN_ID = os.environ["TELEGRAM_ADMIN_ID"]
-JSON_KEY_FILE = os.environ["JSON_KEY_FILE"]
-app = Flask(__name__)
-
 import telebot
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 
 # define the Telegram bot
-bot = telebot.TeleBot(token_telegram)
+bot = telebot.TeleBot(os.environ['token_telegram'])
 
 # define the Google Sheets credentials
-creds = ServiceAccountCredentials.from_json_keyfile_name('/content/insperautomacao-joao-2f50fd8a490f.json', ['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive'])
+creds = ServiceAccountCredentials.from_json_keyfile_name('creds.json', ['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive'])
 
 # define the Google Sheets client
 client = gspread.authorize(creds)
