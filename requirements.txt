@@ -6,4 +6,4 @@ telebot
 gspread 
 oauth2client
 ServiceAccountCredentials
-pandas as pd
+pandas
