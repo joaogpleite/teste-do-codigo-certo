@@ -4,6 +4,8 @@ tchan
 requests
 telebot
 gspread 
-oauth2client
+numpy==1.19.5
+pandas==1.1.5
+google-auth==1.35.0
+oauth2client==4.1.3
 ServiceAccountCredentials
-pandas
