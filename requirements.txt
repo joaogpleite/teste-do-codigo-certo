@@ -4,5 +4,6 @@ tchan
 requests
 telebot
 gspread 
-from oauth2client.service_account import ServiceAccountCredentials
+oauth2client
+ServiceAccountCredentials
 pandas as pd
